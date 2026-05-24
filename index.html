@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possessivpronomen Nom + Akk + Dat — tabelul complet · Annettes Deutschkurs</title>
+    <meta property="og:title" content="Possessivpronomen Nom + Akk + Dat · Claudia Toth">
+    <meta property="og:description" content="Tabelul complet al pronumelor posesive la Nominativ, Akkusativ și Dativ. Cele 9 persoane × 4 paradigme + capcanele sein/ihr și euer/eure. Atelier A2 de aprofundare.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ro_RO">
+    <meta name="description" content="Atelier A2 — Possessivpronomen Nominativ + Akkusativ + Dativ: tabel complet, 7 exerciții × 10 itemi, 32 flashcards, test final 15 întrebări · Claudia Toth">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#top" class="navbar-logo">ʚଓ Claudia Toth</a>
+        <ul class="navbar-menu">
+            <li><a href="#teorie" onclick="openSection(0)">Teorie</a></li>
+            <li><a href="#ex1" onclick="openSection(1)">Ex. 1</a></li>
+            <li><a href="#ex2" onclick="openSection(2)">Ex. 2</a></li>
+            <li><a href="#ex3" onclick="openSection(3)">Ex. 3</a></li>
+            <li><a href="#ex4" onclick="openSection(4)">Ex. 4</a></li>
+            <li><a href="#ex5" onclick="openSection(5)">Ex. 5</a></li>
+            <li><a href="#ex6" onclick="openSection(6)">Ex. 6</a></li>
+            <li><a href="#ex7" onclick="openSection(7)">Ex. 7</a></li>
+            <li><a href="#flashcards" onclick="openSection(8)">📇 Flashcards</a></li>
+            <li><a href="#final-test" onclick="openSection(9)">🎯 Test Final</a></li>
+            <li><a href="possessivpronomen-nom-akk-dat.pdf" download>📄 PDF</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="top">
+        <div class="header">
+            <h1>ʚଓ Possessivpronomen — tabelul complet</h1>
+            <p class="subtitle">Nominativ + Akkusativ + Dativ · cele 9 persoane × 4 paradigme + capcanele sein/ihr și euer/eure</p>
+            <p>Claudia Toth · Annettes Deutschkurs · Atelier A2 de aprofundare</p>
+        </div>
+
+        <div class="cast-banner">
+            <h4>👋 Cast „Annettes Deutschkurs" — 6 personaje pentru cele 9 persoane gramaticale</h4>
+            <div class="cast-grid">
+                <div class="cast-card"><img src="images/annette.png" alt="Annette"><div class="name">Annette</div><div class="detail">Profesoara · ich / sie (ea)</div></div>
+                <div class="cast-card"><img src="images/andreea.png" alt="Andreea"><div class="name">Andreea 🇷🇴</div><div class="detail">Studentă · sie (ea)</div></div>
+                <div class="cast-card"><img src="images/mihai.png" alt="Mihai"><div class="name">Mihai</div><div class="detail">Bucătar · du / er</div></div>
+                <div class="cast-card"><img src="images/florian.png" alt="Florian"><div class="name">Florian</div><div class="detail">Doctor · er (el)</div></div>
+                <div class="cast-card"><img src="images/carolina.png" alt="Carolina"><div class="name">Carolina</div><div class="detail">Fotografă · sie (ea)</div></div>
+                <div class="cast-card"><img src="images/acar.png" alt="Acar"><div class="name">Acar</div><div class="detail">Maistru · er (el)</div></div>
+            </div>
+        </div>
+
+        <div style="background:#fef3c7; border-left:4px solid #f59e0b; padding:14px 20px; margin:20px 0; border-radius:8px;">
+            <p style="margin:0; color:#78350f; font-size:0.95rem;">⌨️ <strong>Tastatură fără caractere germane?</strong> Scrie <strong>ss</strong> pentru ß · <strong>ae</strong> pentru ä · <strong>oe</strong> pentru ö · <strong>ue</strong> pentru ü. Diacritice românești cu sau fără ăâîșț — totul merge.</p>
+        </div>
+
+        <div class="content">
+            <div class="section" id="teorie">
+                <div class="section-header" onclick="toggleMainSection(0)"><h3>ʚଓ TEORIE</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-0"><div id="theory-container"></div></div>
+            </div>
+
+            <div class="section" id="ex1">
+                <div class="section-header" onclick="toggleMainSection(1)"><h3>ʚଓ Übung 1: sein sau ihr? Cine deține? (10 itemi)</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-1">
+                    <div id="ex1-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(1)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(1)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-1"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex2">
+                <div class="section-header" onclick="toggleMainSection(2)"><h3>ʚଓ Übung 2: Lückentext NOMINATIV (10 itemi)</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-2">
+                    <div id="ex2-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(2)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(2)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-2"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex3">
+                <div class="section-header" onclick="toggleMainSection(3)"><h3>ʚଓ Übung 3: Lückentext AKKUSATIV (10 itemi)</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-3">
+                    <div id="ex3-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(3)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(3)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-3"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex4">
+                <div class="section-header" onclick="toggleMainSection(4)"><h3>ʚଓ Übung 4: Lückentext DATIV (10 itemi)</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-4">
+                    <div id="ex4-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(4)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(4)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-4"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex5">
+                <div class="section-header" onclick="toggleMainSection(5)"><h3>ʚଓ Übung 5: Transformare Nom → Akk → Dat (10 itemi)</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-5">
+                    <div id="ex5-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(5)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(5)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-5"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex6">
+                <div class="section-header" onclick="toggleMainSection(6)"><h3>ʚଓ Übung 6: Spot-the-mistake — corectează greșeala (10 itemi)</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-6">
+                    <div id="ex6-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(6)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(6)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-6"></div>
+                </div>
+            </div>
+
+            <div class="section" id="ex7">
+                <div class="section-header" onclick="toggleMainSection(7)"><h3>ʚଓ Übung 7: Recompune propoziția (10 itemi)</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-7">
+                    <div id="ex7-container"></div>
+                    <div class="btn-container">
+                        <button class="btn btn-check" onclick="checkExercise(7)">✓ Verifica</button>
+                        <button class="btn btn-reset" onclick="resetExercise(7)">↻ Reseteaza</button>
+                    </div>
+                    <div class="score" id="score-7"></div>
+                </div>
+            </div>
+
+            <div class="section" id="flashcards">
+                <div class="section-header" onclick="toggleMainSection(8)"><h3>ʚଓ 📇 Flashcards — 32 cards cu pronunție</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-8"><div id="flashcards-container"></div></div>
+            </div>
+
+            <div class="section" id="final-test">
+                <div class="section-header" onclick="toggleMainSection(9)"><h3>ʚଓ 🎯 Test Final — 15 întrebări mixte</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-9">
+                    <div id="test-intro">
+                        <p style="margin-bottom: 16px;">📋 Testul are <strong>15 întrebări</strong>: 5 multiple choice + 5 Lückentext mixt (Nom/Akk/Dat) + 5 detectare greșeală. Răspunde la fiecare și primește rezultatul la final.</p>
+                        <button class="btn btn-check" onclick="startTest()">🎯 Începe testul</button>
+                    </div>
+                    <div id="test-question" style="display:none;"></div>
+                    <div id="test-result" style="display:none;"></div>
+                </div>
+            </div>
+
+            <div class="theory-box" style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 1.3rem; font-weight: bold; color: #065f46;">🎉 Posesivul stăpânit complet!</p>
+                <p style="margin-top: 12px;">Cu lecția asta ai acoperit cele <strong>9 persoane × 4 paradigme</strong> pentru posesivul german la Nom + Akk + Dat. Plus capcanele cheie: <strong>sein vs ihr</strong> (cine deține contează), <strong>euer → eure/euren/eurem</strong> (-e- se topește), și forma politicoasă <strong>Sie → Ihr</strong> cu majusculă. Acum poți construi propoziții firești fără greșeli de caz pe posesiv.</p>
+                <p style="margin-top: 10px; font-style: italic; color: #6b7280;">Atelier A2 de aprofundare · Annettes Deutschkurs · Claudia Toth</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="theory.js"></script>
+    <script src="exercises.js"></script>
+    <script src="flashcards.js"></script>
+    <script src="final-test.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
