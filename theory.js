@@ -104,31 +104,48 @@ const theoryHTML = `
     <div class="sub-section-content" style="display:none;">
         <h4 style="color:#065f46;">🅰️ NOMINATIV (subiect — wer? was?)</h4>
         <table class="grammar-table">
-            <thead><tr><th></th><th>ich</th><th>du</th><th>er</th><th>sie</th><th>es</th><th>wir</th><th>ihr</th><th>sie/Sie</th></tr></thead>
+            <thead><tr><th>Persoană</th><th>m/n</th><th>f/pl</th><th>Exemplu (DE)</th><th>Traducere RO</th></tr></thead>
             <tbody>
-                <tr><td><strong>m/n</strong></td><td>mein</td><td>dein</td><td>sein</td><td>ihr</td><td>sein</td><td>unser</td><td>euer</td><td>ihr / Ihr</td></tr>
-                <tr><td><strong>f/pl</strong></td><td>meine</td><td>deine</td><td>seine</td><td>ihre</td><td>seine</td><td>unsere</td><td>eure</td><td>ihre / Ihre</td></tr>
+                <tr><td><strong>ich</strong> (eu)</td><td>mein</td><td>meine</td><td>mein Vater · meine Mutter</td><td><em>tatăl meu · mama mea</em></td></tr>
+                <tr><td><strong>du</strong> (tu)</td><td>dein</td><td>deine</td><td>dein Bruder · deine Schwester</td><td><em>fratele tău · sora ta</em></td></tr>
+                <tr><td><strong>er</strong> (Florian)</td><td>sein</td><td>seine</td><td>sein Hund · seine Tasche</td><td><em>câinele lui · geanta lui</em></td></tr>
+                <tr><td><strong>sie</strong> (Carolina)</td><td>ihr</td><td>ihre</td><td>ihr Buch · ihre Freundin</td><td><em>cartea ei · prietena ei</em></td></tr>
+                <tr><td><strong>es</strong> (das Kind)</td><td>sein</td><td>seine</td><td>sein Spielzeug · seine Mutter</td><td><em>jucăria lui · mama lui</em></td></tr>
+                <tr><td><strong>wir</strong> (noi)</td><td>unser</td><td>unsere</td><td>unser Lehrer · unsere Lehrerin</td><td><em>profesorul nostru · profesoara noastră</em></td></tr>
+                <tr><td><strong>ihr</strong> (voi)</td><td>euer</td><td>eure</td><td>euer Vater · eure Mutter</td><td><em>tatăl vostru · mama voastră</em></td></tr>
+                <tr><td><strong>sie</strong> (ei/ele) / <strong>Sie</strong> (Dvs.)</td><td>ihr / Ihr</td><td>ihre / Ihre</td><td>ihr Onkel · Ihr Termin</td><td><em>unchiul lor · programarea Dvs.</em></td></tr>
             </tbody>
         </table>
 
         <h4 style="color:#065f46; margin-top:18px;">🅱️ AKKUSATIV (complement direct — wen? was?)</h4>
+        <p style="color:#92400e; font-style:italic; margin-bottom:6px;">🟡 Doar masculinul se schimbă (-en). Neutrum și feminin/plural = identice cu Nominativul.</p>
         <table class="grammar-table">
-            <thead><tr><th></th><th>ich</th><th>du</th><th>er</th><th>sie</th><th>es</th><th>wir</th><th>ihr</th><th>sie/Sie</th></tr></thead>
+            <thead><tr><th>Persoană</th><th>m (-en!)</th><th>n</th><th>f/pl</th><th>Exemplu (DE)</th><th>Traducere RO</th></tr></thead>
             <tbody>
-                <tr style="background:#fef3c7"><td><strong>m</strong></td><td>meinen</td><td>deinen</td><td>seinen</td><td>ihren</td><td>seinen</td><td>unseren</td><td>euren</td><td>ihren / Ihren</td></tr>
-                <tr><td><strong>n</strong></td><td>mein</td><td>dein</td><td>sein</td><td>ihr</td><td>sein</td><td>unser</td><td>euer</td><td>ihr / Ihr</td></tr>
-                <tr><td><strong>f/pl</strong></td><td>meine</td><td>deine</td><td>seine</td><td>ihre</td><td>seine</td><td>unsere</td><td>eure</td><td>ihre / Ihre</td></tr>
+                <tr><td><strong>ich</strong> (eu)</td><td style="background:#fef3c7">meinen</td><td>mein</td><td>meine</td><td>Ich rufe meinen Bruder an.</td><td><em>Îl sun pe fratele meu.</em></td></tr>
+                <tr><td><strong>du</strong> (tu)</td><td style="background:#fef3c7">deinen</td><td>dein</td><td>deine</td><td>Suchst du deinen Schlüssel?</td><td><em>Îți cauți cheia?</em></td></tr>
+                <tr><td><strong>er</strong> (Florian)</td><td style="background:#fef3c7">seinen</td><td>sein</td><td>seine</td><td>Florian besucht seinen Vater.</td><td><em>Florian își vizitează tatăl.</em></td></tr>
+                <tr><td><strong>sie</strong> (Carolina)</td><td style="background:#fef3c7">ihren</td><td>ihr</td><td>ihre</td><td>Carolina liebt ihren Hund.</td><td><em>Carolina își iubește câinele.</em></td></tr>
+                <tr><td><strong>es</strong> (das Kind)</td><td style="background:#fef3c7">seinen</td><td>sein</td><td>seine</td><td>Das Kind sucht sein Spielzeug.</td><td><em>Copilul își caută jucăria.</em></td></tr>
+                <tr><td><strong>wir</strong> (noi)</td><td style="background:#fef3c7">unseren</td><td>unser</td><td>unsere</td><td>Wir grüßen unseren Lehrer.</td><td><em>Îl salutăm pe profesorul nostru.</em></td></tr>
+                <tr><td><strong>ihr</strong> (voi)</td><td style="background:#fef3c7">euren</td><td>euer</td><td>eure</td><td>Habt ihr euren Pass?</td><td><em>Aveți pașaportul vostru?</em></td></tr>
+                <tr><td><strong>sie</strong> (ei/ele) / <strong>Sie</strong> (Dvs.)</td><td style="background:#fef3c7">ihren / Ihren</td><td>ihr / Ihr</td><td>ihre / Ihre</td><td>Sie hassen ihren Chef.</td><td><em>Își urăsc șeful.</em></td></tr>
             </tbody>
         </table>
-        <p style="color:#92400e; font-style:italic; margin-top:4px;">🟡 Rândul galben = singura schimbare reală! Neutrum și feminin/plural = identice cu Nominativul.</p>
 
         <h4 style="color:#065f46; margin-top:18px;">©️ DATIV (complement indirect — wem? — cu/la cine?)</h4>
+        <p style="color:#6b7280; font-style:italic; margin-bottom:6px;">📌 Schema desinențelor: m/n → -em · f → -er · pl → -en (atenție: -en la pl Dat ≠ -en la m Akk!)</p>
         <table class="grammar-table">
-            <thead><tr><th></th><th>ich</th><th>du</th><th>er</th><th>sie</th><th>es</th><th>wir</th><th>ihr</th><th>sie/Sie</th></tr></thead>
+            <thead><tr><th>Persoană</th><th>m/n (-em)</th><th>f (-er)</th><th>pl (-en)</th><th>Exemplu (DE)</th><th>Traducere RO</th></tr></thead>
             <tbody>
-                <tr><td><strong>m/n</strong></td><td>meinem</td><td>deinem</td><td>seinem</td><td>ihrem</td><td>seinem</td><td>unserem</td><td>eurem</td><td>ihrem / Ihrem</td></tr>
-                <tr><td><strong>f</strong></td><td>meiner</td><td>deiner</td><td>seiner</td><td>ihrer</td><td>seiner</td><td>unserer</td><td>eurer</td><td>ihrer / Ihrer</td></tr>
-                <tr><td><strong>pl</strong></td><td>meinen</td><td>deinen</td><td>seinen</td><td>ihren</td><td>seinen</td><td>unseren</td><td>euren</td><td>ihren / Ihren</td></tr>
+                <tr><td><strong>ich</strong> (eu)</td><td>meinem</td><td>meiner</td><td>meinen</td><td>Ich helfe meinem Vater.</td><td><em>Îmi ajut tatăl.</em></td></tr>
+                <tr><td><strong>du</strong> (tu)</td><td>deinem</td><td>deiner</td><td>deinen</td><td>Spielst du mit deinem Bruder?</td><td><em>Te joci cu fratele tău?</em></td></tr>
+                <tr><td><strong>er</strong> (Florian)</td><td>seinem</td><td>seiner</td><td>seinen</td><td>Florian wohnt bei seinen Eltern.</td><td><em>Florian locuiește la părinții lui.</em></td></tr>
+                <tr><td><strong>sie</strong> (Carolina)</td><td>ihrem</td><td>ihrer</td><td>ihren</td><td>Carolina geht zu ihrer Freundin.</td><td><em>Carolina merge la prietena ei.</em></td></tr>
+                <tr><td><strong>es</strong> (das Kind)</td><td>seinem</td><td>seiner</td><td>seinen</td><td>Das Kind spielt mit seiner Mutter.</td><td><em>Copilul se joacă cu mama lui.</em></td></tr>
+                <tr><td><strong>wir</strong> (noi)</td><td>unserem</td><td>unserer</td><td>unseren</td><td>Wir helfen unserer Nachbarin.</td><td><em>O ajutăm pe vecina noastră.</em></td></tr>
+                <tr><td><strong>ihr</strong> (voi)</td><td>eurem</td><td>eurer</td><td>euren</td><td>Ihr fahrt mit eurem Onkel.</td><td><em>Voi plecați cu unchiul vostru.</em></td></tr>
+                <tr><td><strong>sie</strong> (ei/ele) / <strong>Sie</strong> (Dvs.)</td><td>ihrem / Ihrem</td><td>ihrer / Ihrer</td><td>ihren / Ihren</td><td>Sie reisen mit ihren Kindern.</td><td><em>Călătoresc cu copiii lor.</em></td></tr>
             </tbody>
         </table>
 
