@@ -10,7 +10,12 @@
     function buildPDF() {
         const root = document.getElementById('pdf-content');
         if (!root) return;
-        root.innerHTML = buildCast() + buildTheory() + buildExercises() + buildFlashcards();
+        root.innerHTML = buildCast() + buildTheory() + buildExercises() + buildFlashcards() + buildVerbs();
+    }
+
+    function buildVerbs() {
+        if (typeof verbsHTML !== 'string') return '';
+        return '<h1 class="chapter new-section">🔁 4. Verbe — Akkusativ-magneți + Dativ-magneți</h1>' + verbsHTML;
     }
 
     function buildCast() {

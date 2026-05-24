@@ -25,7 +25,8 @@
             <li><a href="#ex6" onclick="openSection(6)">Ex. 6</a></li>
             <li><a href="#ex7" onclick="openSection(7)">Ex. 7</a></li>
             <li><a href="#flashcards" onclick="openSection(8)">📇 Flashcards</a></li>
-            <li><a href="#final-test" onclick="openSection(9)">🎯 Test Final</a></li>
+            <li><a href="#verbe" onclick="openSection(9)">🔁 Verbe</a></li>
+            <li><a href="#final-test" onclick="openSection(10)">🎯 Test Final</a></li>
             <li><a href="possessivpronomen-nom-akk-dat.pdf" download>📄 PDF</a></li>
         </ul>
     </nav>
@@ -148,9 +149,14 @@
                 <div class="section-content" id="main-section-8"><div id="flashcards-container"></div></div>
             </div>
 
+            <div class="section" id="verbe">
+                <div class="section-header" onclick="toggleMainSection(9)"><h3>ʚଓ 🔁 Verbe — Akkusativ-magneți + Dativ-magneți (cazul comandat de verb)</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-9"><div id="verbs-container"></div></div>
+            </div>
+
             <div class="section" id="final-test">
-                <div class="section-header" onclick="toggleMainSection(9)"><h3>ʚଓ 🎯 Test Final — 15 întrebări mixte</h3><span class="arrow">▼</span></div>
-                <div class="section-content" id="main-section-9">
+                <div class="section-header" onclick="toggleMainSection(10)"><h3>ʚଓ 🎯 Test Final — 15 întrebări mixte</h3><span class="arrow">▼</span></div>
+                <div class="section-content" id="main-section-10">
                     <div id="test-intro">
                         <p style="margin-bottom: 16px;">📋 Testul are <strong>15 întrebări</strong>: 5 multiple choice + 5 Lückentext mixt (Nom/Akk/Dat) + 5 detectare greșeală. Răspunde la fiecare și primește rezultatul la final.</p>
                         <button class="btn btn-check" onclick="startTest()">🎯 Începe testul</button>
@@ -171,6 +177,7 @@
     <script src="theory.js"></script>
     <script src="exercises.js"></script>
     <script src="flashcards.js"></script>
+    <script src="verbs.js"></script>
     <script src="final-test.js"></script>
     <script src="main.js"></script>
 </body>

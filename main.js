@@ -178,4 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof buildEx7 === 'function') buildEx7();
     // Build flashcards
     buildFlashcards();
+    // Render verbs
+    const vc = document.getElementById('verbs-container');
+    if (vc && typeof verbsHTML !== 'undefined') vc.innerHTML = verbsHTML;
 });
