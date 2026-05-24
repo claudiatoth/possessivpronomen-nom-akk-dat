@@ -136,6 +136,15 @@
         ul, ol { margin: 4px 0 8px 22px; }
         li { margin-bottom: 2px; }
 
+        /* ===== CAST GRID — personaje (poze 50×50, NU mai mari!) ===== */
+        .cast-banner { border-left: 3px solid #047857; padding: 8px 14px; margin: 10px 0 16px; page-break-inside: avoid; }
+        .cast-banner h4 { color: #065f46; font-size: 11pt; margin-bottom: 8px; }
+        .cast-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+        .cast-card { text-align: center; font-size: 8.5pt; page-break-inside: avoid; }
+        .cast-card img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 4px; border: 2px solid #047857; }
+        .cast-card .name { color: #065f46; font-weight: bold; font-size: 9pt; display: block; }
+        .cast-card .detail { color: #6b7280; font-style: italic; font-size: 7.5pt; display: block; }
+
         /* Boxes (border-left only — economic la print) */
         .theory-box {
             background: transparent;
