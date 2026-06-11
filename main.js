@@ -105,61 +105,9 @@ function resetExercise(num) {
 }
 
 // ============================================
-// FLASHCARDS RENDER
+// FLASHCARDS — logica e mutată în flashcards.js (self-contained,
+// cu mecanismul de FLIP prin clasa .flipped · Regula 21). Nu o redeclara aici.
 // ============================================
-let currentCard = 0;
-function buildFlashcards() {
-    const c = document.getElementById('flashcards-container'); if (!c) return;
-    if (typeof flashcardsData === 'undefined' || !flashcardsData.length) return;
-    let h = `
-        <div class="fc-controls">
-            <button class="btn btn-reset" onclick="prevCard()">← Înapoi</button>
-            <span class="fc-progress" id="fc-progress">1 / ${flashcardsData.length}</span>
-            <button class="btn btn-check" onclick="nextCard()">Înainte →</button>
-        </div>
-        <div class="flashcard" id="flashcard-display" onclick="flipCard()">
-            <div class="fc-front" id="fc-front"></div>
-            <div class="fc-back" id="fc-back" style="display:none;"></div>
-            <div class="fc-hint">📌 Click pentru a vedea traducerea</div>
-        </div>
-        <div class="fc-audio-row">
-            <button class="btn btn-check" id="fc-audio-btn" onclick="playFlashcardAudio()">🔊 Pronunție</button>
-        </div>
-    `;
-    c.innerHTML = h;
-    renderCard();
-}
-function renderCard() {
-    const card = flashcardsData[currentCard];
-    document.getElementById('fc-front').innerHTML = `<span class="de">${card.de}</span>`;
-    document.getElementById('fc-back').innerHTML = `<span class="ro">${card.ro}</span>`;
-    document.getElementById('fc-back').style.display = 'none';
-    document.getElementById('fc-front').style.display = 'block';
-    document.getElementById('fc-progress').textContent = (currentCard + 1) + ' / ' + flashcardsData.length;
-}
-function flipCard() {
-    const front = document.getElementById('fc-front');
-    const back = document.getElementById('fc-back');
-    if (front.style.display === 'none') {
-        front.style.display = 'block';
-        back.style.display = 'none';
-    } else {
-        front.style.display = 'none';
-        back.style.display = 'block';
-    }
-}
-function nextCard() {
-    currentCard = (currentCard + 1) % flashcardsData.length;
-    renderCard();
-}
-function prevCard() {
-    currentCard = (currentCard - 1 + flashcardsData.length) % flashcardsData.length;
-    renderCard();
-}
-function playFlashcardAudio() {
-    const card = flashcardsData[currentCard];
-    if (card.audio) playAudio(card.audio);
-}
 
 // ============================================
 // INIT — la încărcarea paginii
@@ -176,8 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof buildEx5 === 'function') buildEx5();
     if (typeof buildEx6 === 'function') buildEx6();
     if (typeof buildEx7 === 'function') buildEx7();
-    // Build flashcards
-    buildFlashcards();
+    // Flashcards: se inițializează singure din flashcards.js (DOMContentLoaded propriu)
     // Render verbs
     const vc = document.getElementById('verbs-container');
     if (vc && typeof verbsHTML !== 'undefined') vc.innerHTML = verbsHTML;

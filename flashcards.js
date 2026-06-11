@@ -35,7 +35,7 @@ const flashcardsData = [
 
     // ---- Categoria 4: Capcane + forme speciale (8 fișe) ----
     { de: "Annette ruft ihren Sohn an.", ro: "🚨 sein vs ihr — Annette = SIE → ihr- (NU sein-)", audio: "audio/fc-cap-annette.wav" },
-    { de: "Das Mädchen sucht seine Mutter.", ro: "🚨 das Mädchen = ES → sein- (chiar dacă în RO am zice „ea")", audio: "audio/fc-cap-maedchen.wav" },
+    { de: "Das Mädchen sucht seine Mutter.", ro: "🚨 das Mädchen = ES → sein- (chiar dacă în RO am zice EA)", audio: "audio/fc-cap-maedchen.wav" },
     { de: "Mihai und Andreea grüßen ihre Eltern.", ro: "🚨 ei (pl) → ihr- (NU sein-)", audio: "audio/fc-cap-pl.wav" },
     { de: "eure Mutter (NU euere!)", ro: "🚨 -e- din euer DISPARE când are desinență", audio: "audio/fc-cap-eure.wav" },
     { de: "euren Bruder (Akk m, -e- topit)", ro: "🚨 euer → euren la masculin Akk", audio: "audio/fc-cap-euren.wav" },
@@ -43,3 +43,68 @@ const flashcardsData = [
     { de: "Ich helfe meinem Vater.", ro: "🚨 helfen + DAT (-em), NU Akk (-en)", audio: "audio/fc-cap-helfen.wav" },
     { de: "Wir besuchen unsere Großeltern.", ro: "🚨 besuchen + AKK (+e pl), NU Dat", audio: "audio/fc-cap-besuchen.wav" }
 ];
+
+// ============================================
+// FLASHCARDS RENDER  (logică self-contained — mecanismul de FLIP comută clasa
+// CSS .flipped pe #flashcard-display ca să dezvăluie traducerea .ro · Regula 21)
+// ============================================
+let currentCard = 0;
+function buildFlashcards() {
+    const c = document.getElementById('flashcards-container'); if (!c) return;
+    if (typeof flashcardsData === 'undefined' || !flashcardsData.length) return;
+    let h = `
+        <div class="fc-controls">
+            <button class="btn btn-reset" onclick="prevCard()">← Înapoi</button>
+            <span class="fc-progress" id="fc-progress">1 / ${flashcardsData.length}</span>
+            <button class="btn btn-check" onclick="nextCard()">Înainte →</button>
+        </div>
+        <div class="flashcard" id="flashcard-display" onclick="flipCard()">
+            <div class="fc-front" id="fc-front"></div>
+            <div class="fc-back" id="fc-back" style="display:none;"></div>
+            <div class="fc-hint">📌 Click pentru a vedea traducerea</div>
+        </div>
+        <div class="fc-audio-row">
+            <button class="btn btn-check" id="fc-audio-btn" onclick="playFlashcardAudio()">🔊 Pronunție</button>
+        </div>
+    `;
+    c.innerHTML = h;
+    renderCard();
+}
+function renderCard() {
+    const card = flashcardsData[currentCard];
+    document.getElementById('fc-front').innerHTML = `<span class="de">${card.de}</span>`;
+    document.getElementById('fc-back').innerHTML = `<span class="ro">${card.ro}</span>`;
+    document.getElementById('fc-back').style.display = 'none';
+    document.getElementById('fc-front').style.display = 'block';
+    const fcEl = document.getElementById('flashcard-display');
+    if (fcEl) fcEl.classList.remove('flipped');
+    document.getElementById('fc-progress').textContent = (currentCard + 1) + ' / ' + flashcardsData.length;
+}
+function flipCard() {
+    const fcEl = document.getElementById('flashcard-display');
+    const front = document.getElementById('fc-front');
+    const back = document.getElementById('fc-back');
+    if (front.style.display === 'none') {
+        front.style.display = 'block';
+        back.style.display = 'none';
+        if (fcEl) fcEl.classList.remove('flipped');
+    } else {
+        front.style.display = 'none';
+        back.style.display = 'block';
+        if (fcEl) fcEl.classList.add('flipped');
+    }
+}
+function nextCard() {
+    currentCard = (currentCard + 1) % flashcardsData.length;
+    renderCard();
+}
+function prevCard() {
+    currentCard = (currentCard - 1 + flashcardsData.length) % flashcardsData.length;
+    renderCard();
+}
+function playFlashcardAudio() {
+    const card = flashcardsData[currentCard];
+    if (card.audio) playAudio(card.audio);
+}
+
+document.addEventListener('DOMContentLoaded', buildFlashcards);
